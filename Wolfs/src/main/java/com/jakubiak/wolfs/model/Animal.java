@@ -1,0 +1,57 @@
+package com.jakubiak.wolfs.model;
+
+public abstract class Animal implements Runnable {
+    protected final Board board;
+    private final int delay;
+    private int positionX;
+    private int positionY;
+    private boolean isDead;
+
+    public Animal(int positionX, int positionY, int delay, Board board) {
+        this.positionX = positionX;
+        this.positionY = positionY;
+        this.delay = delay;
+        this.board = board;
+        this.isDead = false;
+    }
+
+    public boolean isDead() {
+        return isDead;
+    }
+
+    public void kill() {
+        this.isDead = true;
+    }
+
+    public Board getBoard() {
+        return board;
+    }
+
+    public int getDelay() {
+        return delay;
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "X=" + positionX +
+                ", Y=" + positionY +
+                '}';
+    }
+
+    public int getPositionX() {
+        return positionX;
+    }
+
+    public void setPositionX(int positionX) {
+        this.positionX = positionX;
+    }
+
+    public int getPositionY() {
+        return positionY;
+    }
+
+    public void setPositionY(int positionY) {
+        this.positionY = positionY;
+    }
+}
