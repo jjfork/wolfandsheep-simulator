@@ -1,13 +1,15 @@
 package com.jakubiak.wolfs.model;
 
+import com.jakubiak.wolfs.logic.LogicBoard;
+
 public abstract class Animal implements Runnable {
-    protected final Board board;
+    protected final LogicBoard board;
     private final int delay;
     private int positionX;
     private int positionY;
     private boolean isDead;
 
-    public Animal(int positionX, int positionY, int delay, Board board) {
+    public Animal(int positionX, int positionY, int delay, LogicBoard board) {
         this.positionX = positionX;
         this.positionY = positionY;
         this.delay = delay;
@@ -23,7 +25,7 @@ public abstract class Animal implements Runnable {
         this.isDead = true;
     }
 
-    public Board getBoard() {
+    public LogicBoard getBoard() {
         return board;
     }
 
@@ -39,7 +41,7 @@ public abstract class Animal implements Runnable {
                 '}';
     }
 
-    public int getPositionX() {
+    public int x() {
         return positionX;
     }
 
@@ -47,7 +49,7 @@ public abstract class Animal implements Runnable {
         this.positionX = positionX;
     }
 
-    public int getPositionY() {
+    public int y() {
         return positionY;
     }
 
