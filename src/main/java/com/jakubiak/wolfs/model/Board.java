@@ -167,14 +167,14 @@ public class Board {
 
     public Thread addWolf(int delay) {
         Position position = getFreePosition();
-        Wolf wolf = new Wolf(position.x(), position.y(), delay, this);
+        Wolf wolf = new Wolf(position.x(), position.y(), delay, null);
         animals.add(wolf);
         return new Thread(wolf);
     }
 
     public Thread addSheep(int delay) {
         Position position = getFreePosition();
-        Sheep sheep = new Sheep(position.x(), position.y(), delay, this);
+        Sheep sheep = new Sheep(position.x(), position.y(), delay, null);
         animals.add(sheep);
         return new Thread(sheep);
     }

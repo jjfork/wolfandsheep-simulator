@@ -1,0 +1,5 @@
+/Wolfs/${project.build.directory}/
+/.idea/
+/${project.build.directory}/
+/logic.iml
+/Wolfs.iml

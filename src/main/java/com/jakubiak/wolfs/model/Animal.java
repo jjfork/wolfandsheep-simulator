@@ -9,6 +9,14 @@ public abstract class Animal implements Runnable {
     private int positionY;
     private boolean isDead;
 
+    public int getPositionX() {
+        return positionX;
+    }
+
+    public int getPositionY() {
+        return positionY;
+    }
+
     public Animal(int positionX, int positionY, int delay, LogicBoard board) {
         this.positionX = positionX;
         this.positionY = positionY;
